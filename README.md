@@ -97,7 +97,7 @@
     <div id="home" class="page">
         
         <div class="box">
-            <img src="https://via.placeholder.com/800x400" alt="홈 이미지">
+            <img src="KakaoTalk_20240527_171323287.jpg" alt="홈 이미지">
             <h2>홈 - 1번</h2>
             <p>가나다라</p>
         </div>
