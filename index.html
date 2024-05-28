@@ -2,59 +2,91 @@
 <html>
 <head>
     <title>웹프로그래밍 과제</title>
-    
     <style>
-        body { margin: 0; padding: 0; background-color: white; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
         
-        header { display: flex; justify-content: right; background-color: white; padding: 10px 0; }
+        header {
+            display: flex;
+            justify-content: right;
+            background-color: white;
+            padding: 10px 0;
+        }
 
-        header a { color: black; padding: 14px 20px; text-decoration: none; }
+        header a {
+            color: black;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
 
-        header a:hover { color: white; padding: 14px 20px; text-decoration: none; background-color: black; }
+        header a:hover {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            background-color: black;
+        }
 
-        main { padding: 20px; }
+        main {
+            padding: 20px;
+        }
 
-        .page { display: none; background-color: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .page {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
-        .page.active { display: block; }
+        .page.active {
+            display: block;
+        }
 
-        .box { background-color: #fff; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .box {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
 
-        .box img { max-width: 500px; margin-right: 15px; border-radius: 8px; }
+        .box img {
+            max-width: 500px;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
         
     </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready
-        (
-            function() 
-            {
-                $('.page').first().addClass('active');
+        $(document).ready(function() {
+            // 초기 페이지 설정
+            $('.page').first().addClass('active');
 
-                $('header a').click
-                (
-                    function(event) 
-                    {
-                        event.preventDefault();
-                        var page = $(this).attr('href').substring(1);
-                        navigate(page);
-                    }
-                );
+            // 네비게이션 클릭 이벤트
+            $('header a').click(function(event) {
+                event.preventDefault();
+                var page = $(this).attr('href').substring(1);
+                navigate(page);
+            });
 
-                function navigate(page) 
-                {
-                    $('.page').removeClass('active');
-                    $('#' + page).addClass('active');
-                }
+            function navigate(page) {
+                $('.page').removeClass('active');
+                $('#' + page).addClass('active');
             }
-        );
+        });
     </script>
 </head>
-    
 <body>
 
-    <header>
+
+
+<header>
     <a href="#main">main</a>
     <a href="#me">me</a>
     <a href="#works">works</a>
@@ -65,7 +97,7 @@
     <div id="main" class="page">
         
         <div class="box">
-            <img src="https://private-user-images.githubusercontent.com/168794034/334410074-3611a584-6f4b-43f8-b6f5-0b8d91a99ed0.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY4OTk2NTIsIm5iZiI6MTcxNjg5OTM1MiwicGF0aCI6Ii8xNjg3OTQwMzQvMzM0NDEwMDc0LTM2MTFhNTg0LTZmNGItNDNmOC1iNmY1LTBiOGQ5MWE5OWVkMC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTI4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUyOFQxMjI5MTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01OTMyZjJjYmU2NDE4YTljYzc2OGVhNGQ1MDMzZDkwZjk2Nzg4ZjQzNzBmYjRjMjAxMWJiNWQxYjUzOTYwN2IyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.AlGNAAvzXDLBbOhduxIIn_BrcLeZTe71dh5ctbg-I2Y" alt="홈 이미지">
+            <img src="https://via.placeholder.com/800x400" alt="홈 이미지">
             <h2>홈 - 1번</h2>
             <p>가나다라</p>
         </div>
